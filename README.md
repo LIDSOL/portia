@@ -6,7 +6,7 @@ Aplicación VR movil de aracnofobia, realizada usando Unreal Engine 4.
 
 Rama dedicada al desarrollo del proyecto utilizando el motor de videojuegos Unreal Engine 4.
 
-Se busca realizar el desarrollo de una aplicación de VR para moviles que haga uso de las tecnologías de VR que brinda Unreal Engine 4, se pretende que la aplicación se pueda utilizar como herramienta en el tratamiento de pacientes con aracnofobia.
+Se busca realizar el desarrollo de una aplicación de VR para móviles que haga uso de las tecnologías de VR que brinda Unreal Engine 4, se pretende que la aplicación se pueda utilizar como herramienta en el tratamiento de pacientes con aracnofobia.
 
 ## Guía de estilo
 
@@ -16,7 +16,7 @@ Se usara la siguiente [guía de estilo](https://github.com/penserbjorne/ue4-styl
 
 + Windows 10
 + Unreal Engine 4.16.1
-+ Microsoft Visual Studio Community 2017 Versión 15.2 (26430.6) Release
++ Microsoft Visual Studio Community 2017 Versión 15.2 (26430.13) Release
 + Microsoft .NET Framework version 4.6.01586
 + Visual C++ 2017 (00369-60000-00001-AA060)
 
