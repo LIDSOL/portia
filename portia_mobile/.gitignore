@@ -53,6 +53,7 @@ Binaries/*
 
 # Builds
 Build/*
+AndroidBuilds/*
 
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
