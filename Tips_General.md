@@ -19,7 +19,13 @@ Para eliminar la instalación de Visual Studio recomiendo [esta herramienta](htt
 
 ## Unreal Engine
 
-#### Problema al abrir consola:
+### Problema al abrir consola:
 
 - Ir a "Editar" -> "Preferencias del editor..." -> "General" -> "Keyboard Shorcuts" y buscar 'console'.
 - Sobreescribir el Shorcut (con el mismo valor) que dice 'Open an edit box when you can type...'.
+
+## APK
+
+### Instalación
+
+- Samsung Galaxy S5 -> armv7

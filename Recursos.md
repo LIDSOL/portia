@@ -40,6 +40,7 @@
 	- Ext. Original: .max
 	- Keys: Básica
 - [Spider Animated and Game-Ready](https://free3d.com/3d-model/spider-animated-low-poly-and-game-ready-87147.html)
+	- Nombre en proyecto: Spider1
 	- Ext. Original: .max
 	- Keys: Mecánica, robótica
 	- Listo en UE4
