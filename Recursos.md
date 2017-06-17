@@ -47,3 +47,9 @@
 - [TARANTULA - Crab Spider](https://free3d.com/3d-model/tarantula-crab-spider-72919.html)
 	- Ext. Original: .max, .tga
 	- Keys: Tarántula
+
+
+## Texturas
+
+- Spiderweb
+	- [T_Spiderweb_48x48.png](https://www.iconfinder.com/icons/205626/animal_center_clue_cobweb_communication_connection_danger_dangerous_dead_fake_false_grid_halloween_insect_insects_ladybird_media_net_network_shape_social_spider_spider%27s_web_spiderweb_web_icon#size=48)
