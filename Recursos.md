@@ -48,6 +48,11 @@
 	- Ext. Original: .max, .tga
 	- Keys: Tarántula
 
+### Cuartos
+
+- [3dsMax 2009 и ниже (Vray)](https://3dsky.org/3dmodels/show/miebiel_dlia_dietskoi_18)
+	- Nombre en proyecto: Spider1
+	- Ext. Original: .max
 
 ## Texturas
 
