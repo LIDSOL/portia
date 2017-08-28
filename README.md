@@ -15,10 +15,10 @@ Se usara la siguiente [guía de estilo](https://github.com/penserbjorne/ue4-styl
 ## Herramientas y plataformas usadas al momento.
 
 + Windows 10
-+ Unreal Engine 4.16.1
-+ Microsoft Visual Studio Community 2017 Versión 15.2 (26430.13) Release
++ Unreal Engine 4.17.1
++ Microsoft Visual Studio Community 2017 Versión 15.3.2
 + Microsoft .NET Framework version 4.6.01586
-+ Visual C++ 2017 (00369-60000-00001-AA060)
++ Visual C++ 2017 (00369-60000-00001-AA918)
 
 # Bug, Issue or Feature request.
 
