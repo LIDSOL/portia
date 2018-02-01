@@ -29,7 +29,6 @@ public class MenuButton : MonoBehaviour {
             if (timer >= gazeOnTime)
             {
                 timer = 0f;
-                ExecuteEvents.Execute(gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
             }
         }
     }
