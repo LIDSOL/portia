@@ -1,24 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class ButtonMenu : MonoBehaviour {
+public class ButtonUI : MonoBehaviour {
 
-    public Material HighLightMaterial;
+    public Sprite HighLightSprite;
+    public Sprite NormalSprite;
     public string SceneDestination;
     public float GazeOnTime = 1.0f;
 
-    private Material NormalMaterial;
-    private Renderer MyRenderer;
+    private Image image;
     private float Timer;
     private bool GazeAt;
-    
+
 	// Use this for initialization
 	void Start () {
-        this.MyRenderer = GetComponent<Renderer> ();
-        this.NormalMaterial = this.MyRenderer.material;
+        image = GetComponent<Image>();
+        image.sprite = NormalSprite;
         this.Timer = 0.0f;
         this.GazeAt = false;
 	}
@@ -38,15 +38,14 @@ public class ButtonMenu : MonoBehaviour {
 
     public void HighLight()
     {
-        MyRenderer.material = HighLightMaterial;
+        image.sprite = HighLightSprite;
         GazeAt = true;
     }
 
-    public void NormalRender()
+    public void NormalRenderer()
     {
-        MyRenderer.material = NormalMaterial;
+        image.sprite = NormalSprite;
         GazeAt = false;
         Timer = 0.0f;
     }
-
 }
