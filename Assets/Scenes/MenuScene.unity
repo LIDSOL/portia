@@ -145,11 +145,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1b781ad67e8a54061b9897ddfbfdb479, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1b781ad67e8a54061b9897ddfbfdb479, type: 3}
       propertyPath: m_Name
       value: CubeRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1b781ad67e8a54061b9897ddfbfdb479, type: 3}
+      propertyPath: m_Name
+      value: CubeRoomEnv
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b781ad67e8a54061b9897ddfbfdb479, type: 3}
@@ -165,7 +169,7 @@ GameObject:
   - component: {fileID: 3855253}
   - component: {fileID: 3855252}
   m_Layer: 0
-  m_Name: New Text
+  m_Name: TextButtonExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,7 +252,7 @@ GameObject:
   - component: {fileID: 290801270}
   - component: {fileID: 290801269}
   m_Layer: 0
-  m_Name: New Text
+  m_Name: TextButtonSceneRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,7 +337,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4923738961036658, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.95
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4923738961036658, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
       propertyPath: m_LocalPosition.z
@@ -357,11 +361,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4923738961036658, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1091315479832830, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
       propertyPath: m_Name
-      value: MainCamera
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
@@ -429,7 +433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1154585714
 GameObject:
@@ -442,7 +446,7 @@ GameObject:
   - component: {fileID: 1154585717}
   - component: {fileID: 1154585716}
   m_Layer: 0
-  m_Name: New Text
+  m_Name: TextButtonAbout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -657,7 +661,7 @@ Transform:
   m_Children:
   - {fileID: 1154585715}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -10, z: 0}
 --- !u!114 &1267298135
 MonoBehaviour:
@@ -914,7 +918,7 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1064,7 +1068,7 @@ Transform:
   m_Children:
   - {fileID: 290801268}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1750581769
 MonoBehaviour:
@@ -1163,7 +1167,7 @@ Transform:
   m_Children:
   - {fileID: 1891333862}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1833846665
 MonoBehaviour:
@@ -1376,7 +1380,7 @@ Transform:
   m_Children:
   - {fileID: 3855251}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 10, z: 0}
 --- !u!114 &1874558144
 MonoBehaviour:
@@ -1400,7 +1404,7 @@ GameObject:
   - component: {fileID: 1891333864}
   - component: {fileID: 1891333863}
   m_Layer: 0
-  m_Name: New Text
+  m_Name: TextButtonSceneForest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
