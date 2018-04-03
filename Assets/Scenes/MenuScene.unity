@@ -188,9 +188,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1267298134}
+  - {fileID: 1460218460}
   - {fileID: 1777490383}
   - {fileID: 415684810}
-  - {fileID: 1460218460}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -246,6 +246,12 @@ Prefab:
       propertyPath: m_Text
       value: Salir
       objectReference: {fileID: 0}
+    - target: {fileID: 114077107947370912, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 41c9e4467ce091846a0df9cd18f91bec,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
   m_IsPrefabParent: 0
@@ -416,6 +422,19 @@ Prefab:
     - target: {fileID: 4060503658406642, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114077107947370912, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 41c9e4467ce091846a0df9cd18f91bec,
+        type: 3}
+    - target: {fileID: 114077107947370912, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Acerca
+
+        de'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
@@ -713,7 +732,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4060503658406642, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1012475473065318, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
       propertyPath: m_Name
@@ -729,6 +748,12 @@ Prefab:
       propertyPath: m_Text
       value: Bosque
       objectReference: {fileID: 0}
+    - target: {fileID: 114077107947370912, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 41c9e4467ce091846a0df9cd18f91bec,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
   m_IsPrefabParent: 0
@@ -790,6 +815,12 @@ Prefab:
       propertyPath: m_Text
       value: Cuarto
       objectReference: {fileID: 0}
+    - target: {fileID: 114077107947370912, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 41c9e4467ce091846a0df9cd18f91bec,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
   m_IsPrefabParent: 0

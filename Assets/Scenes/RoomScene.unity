@@ -446,6 +446,23 @@ Prefab:
       propertyPath: m_Name
       value: ButtonQuit
       objectReference: {fileID: 0}
+    - target: {fileID: 114022715062661540, guid: 96b9a72e0d045e142b8ea791429ba408,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 41c9e4467ce091846a0df9cd18f91bec,
+        type: 3}
+    - target: {fileID: 114222389402481338, guid: 96b9a72e0d045e142b8ea791429ba408,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 41c9e4467ce091846a0df9cd18f91bec,
+        type: 3}
+    - target: {fileID: 114123757006262346, guid: 96b9a72e0d045e142b8ea791429ba408,
+        type: 2}
+      propertyPath: m_DynamicPixelsPerUnit
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96b9a72e0d045e142b8ea791429ba408, type: 2}
   m_IsPrefabParent: 0
