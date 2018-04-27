@@ -577,7 +577,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5d35feaf0c8a98046b7f27c54946555f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d740059ed82dd14eabce9053c15007d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -645,7 +645,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c2ac66ad973c6174295758e6b2820b8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21f2484132bbf2048b9f7d96a69723d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -919,13 +919,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1295218515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea49bc13417b024b8670b2f661bad77, type: 3}
+  m_Script: {fileID: 11500000, guid: bcd8145018ca72d4f9c1b366c37b57dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HighlightMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
   NormalMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
   GazeOnTime: 1
-  AboutTime: 10
+  AboutTime: 13
   MyCanvas: {fileID: 1780397985}
 --- !u!1 &1306208166
 GameObject:
