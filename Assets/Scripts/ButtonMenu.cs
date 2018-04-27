@@ -11,6 +11,7 @@ public class ButtonMenu : MonoBehaviour {
     public float GazeOnTime = 1.0f;
 
     private Material NormalMaterial;
+    private BoxCollider boxCollider;
     private Renderer MyRenderer;
     private float Timer;
     private bool GazeAt;
@@ -30,6 +31,7 @@ public class ButtonMenu : MonoBehaviour {
             Timer += Time.deltaTime;
             if (Timer >= GazeOnTime)
             {
+                Debug.Log("Starts animacion");
                 Timer = 0.0f;
                 SceneManager.LoadScene(SceneDestination);
             }
