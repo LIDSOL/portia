@@ -1419,7 +1419,7 @@ Transform:
   m_GameObject: {fileID: 1556592771978472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 4868498191987114}
   - {fileID: 4072945197496608}
@@ -1773,12 +1773,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6225ea363a981bb41abf73149f95d38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  travelTime: 5
-  walkSpeed: 7
-  walkableRadius: 7
-  startRandomPosition: 0
+  travelTime: 12
+  animationWalkSpeed: 4
+  walkableRadius: 70
+  startRandomPosition: 1
   healthDecrement: 1
-  timeToReturn: 2
+  timeToReturn: 3
   MaxHealth: 100
   addToScore:
     m_PersistentCalls:
@@ -2022,8 +2022,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 1556592771978472}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.68
-  m_Speed: 1
+  m_Radius: 2
+  m_Speed: 3
   m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 5000
@@ -2031,7 +2031,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2.1
+  m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 9
   m_ObstacleAvoidanceType: 2

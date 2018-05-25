@@ -940,6 +940,22 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 485b7074e55a3cd46998d595ade7d5e7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 485b7074e55a3cd46998d595ade7d5e7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 485b7074e55a3cd46998d595ade7d5e7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 485b7074e55a3cd46998d595ade7d5e7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 485b7074e55a3cd46998d595ade7d5e7, type: 3}
   m_IsPrefabParent: 0
@@ -1171,10 +1187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f026d509ec7c244a64264988bc35c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spider: {fileID: 1556592771978472, guid: 05ca9fa28fdbb13439553dcdc8d05f69, type: 2}
-  MaxNumSpiders: 5
+  spider: {fileID: 1565765017377530, guid: 63e0fa44f27289f429d96c3fb1b3b815, type: 2}
+  MaxNumSpiders: 10
   Delay: 1
-  TargetScore: 20
+  TargetScore: 10
 --- !u!4 &1139510531
 Transform:
   m_ObjectHideFlags: 0
@@ -1672,6 +1688,10 @@ Prefab:
     - target: {fileID: 100004, guid: 0d2ed163860809d48ab2e72792d683e8, type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 0d2ed163860809d48ab2e72792d683e8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d2ed163860809d48ab2e72792d683e8, type: 3}

@@ -35,6 +35,7 @@ public class SpiderGenerator : MonoBehaviour {
                 s.GetComponent<SpiderScript>().reactivate();
             }
         }
+        this.verifyConditions();
     }
         
 
@@ -48,6 +49,7 @@ public class SpiderGenerator : MonoBehaviour {
     {
         if (Score > TargetScore)
         {
+            Debug.Log("Se ha alcanzado el objetivo");
             // TODO: Mostrar animación de felicitación porque es bien mach@ :v
             // TODO: Mostrar tiempo en el entorno
             generate = false;
