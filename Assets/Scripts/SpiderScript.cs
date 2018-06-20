@@ -126,6 +126,9 @@ public class SpiderScript : MonoBehaviour {
     {
         if (this.inactiveTime > this.timeToReturn)
         {
+            Vector3 pos;
+            while (!RandomPointOnNavmesh(Vector3.zero, walkableRadius, out pos)) Debug.Log("llamada");
+            gameObject.transform.position = pos;
             this.isActive = true;
             this.inactiveTime = 0.0f;
             this.timer = 0.0f;
@@ -146,5 +149,24 @@ public class SpiderScript : MonoBehaviour {
     public void setGenerator(SpiderGenerator sp)
     {
         this.sp = sp;
+    }
+
+    /* obtiene un punto aleatorio en el navmesh */
+    bool RandomPointOnNavmesh(Vector3 center, float range, out Vector3 result)
+    {
+        NavMeshHit hit;
+        Vector3 randomPoint;
+        for (int i = 0; i < 30; i++)
+        {
+            randomPoint = center + Random.insideUnitSphere * range;
+            if (NavMesh.SamplePosition(randomPoint, out hit, 0.3f, NavMesh.AllAreas))
+            {
+                Debug.Log(i + "intentos");
+                result = hit.position;
+                return true;
+            }
+        }
+        result = Vector3.zero;
+        return false;
     }
 }
