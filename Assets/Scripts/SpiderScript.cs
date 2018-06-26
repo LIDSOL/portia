@@ -161,7 +161,6 @@ public class SpiderScript : MonoBehaviour {
             randomPoint = center + Random.insideUnitSphere * range;
             if (NavMesh.SamplePosition(randomPoint, out hit, 0.3f, NavMesh.AllAreas))
             {
-                Debug.Log(i + "intentos");
                 result = hit.position;
                 return true;
             }

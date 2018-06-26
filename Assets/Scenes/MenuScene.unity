@@ -1245,7 +1245,6 @@ GameObject:
   - component: {fileID: 1780397985}
   - component: {fileID: 1780397984}
   - component: {fileID: 1780397983}
-  - component: {fileID: 1780397987}
   m_Layer: 5
   m_Name: About
   m_TagString: Untagged
@@ -1332,18 +1331,6 @@ RectTransform:
   m_AnchoredPosition: {x: -4.1732, y: 3.122}
   m_SizeDelta: {x: 6, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &1780397987
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1780397982}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.15817, y: 4.8014765, z: 0.09272218}
-  m_Center: {x: 0.11256909, y: 0.18779898, z: -0.0037800074}
 --- !u!1 &1997548102
 GameObject:
   m_ObjectHideFlags: 0

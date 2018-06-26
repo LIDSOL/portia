@@ -42,7 +42,6 @@ public class SpiderGenerator : MonoBehaviour {
     public void addToScore()
     {
         this.Score += 1;
-        Debug.Log("Score " + Score);
     }
 
     void verifyConditions()

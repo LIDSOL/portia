@@ -223,6 +223,8 @@ MonoBehaviour:
   m_DefaultDistance: 5
   m_UseNormal: 0
   m_Image: {fileID: 114156430108315708}
+  m_SpriteNormal: {fileID: 21300000, guid: 3ed52a4f1d53d9e44b14829eabb35022, type: 3}
+  m_SpriteHitObject: {fileID: 21300000, guid: 64e3ba1a3c372d0459f2ffb19d1d7e7a, type: 3}
   m_ReticleTransform: {fileID: 224997772774135584}
   m_Camera: {fileID: 4923738961036658}
 --- !u!114 &114886152022730756

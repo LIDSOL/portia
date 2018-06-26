@@ -36,7 +36,6 @@ public class AboutButton : MonoBehaviour {
             Timer += Time.deltaTime;
             if (Timer >= GazeOnTime)
             {
-                Debug.Log("[AboutButton] Comienza a mostrar mensaje");
                 this.myRenderer.material = HighlightMaterial;
                 Timer = 0.0f;
                 startAnimation();
@@ -54,7 +53,6 @@ public class AboutButton : MonoBehaviour {
                 {
                     this.myRenderer.material = NormalMaterial;
                 }
-                Debug.LogWarning("[AboutButton] Se cierra el mensaje");
             }
         }
 	}
@@ -70,7 +68,7 @@ public class AboutButton : MonoBehaviour {
     }
 
     /**
-     * Callback que se llama cuando el obbjeto objeto deja de ser señalado 
+     * Callback que se llama cuando el objeto deja de ser señalado 
      */
     public void normalRender()
     {
@@ -84,7 +82,7 @@ public class AboutButton : MonoBehaviour {
     }
 
     /**
-     * Función donde se realizan los cambios necesarios para mostrar el texto
+     * Realiza los cambios necesarios para mostrar el texto
      * correctamente
      */
     private void startAnimation()
