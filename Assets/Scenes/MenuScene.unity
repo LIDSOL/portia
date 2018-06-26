@@ -258,7 +258,28 @@ Prefab:
       value: 
       objectReference: {fileID: 12800000, guid: 41c9e4467ce091846a0df9cd18f91bec,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: GazeEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1693266752}
+    - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: GazeEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HighLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: GazaExitEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1693266752}
+    - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: GazaExitEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NormalRender
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114884057531245298, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &415684810 stripped
@@ -1167,6 +1188,24 @@ Transform:
   m_PrefabParentObject: {fileID: 4060503658406642, guid: e1a65c1fe38f0d647aa357d78d53d23c,
     type: 2}
   m_PrefabInternal: {fileID: 1460218459}
+--- !u!1 &1693266751 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1012475473065318, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+    type: 2}
+  m_PrefabInternal: {fileID: 415684809}
+--- !u!114 &1693266752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693266751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c6ef17a22847a41a1713cc90e0bf9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HighLightMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
+  GazeOnTime: 1
 --- !u!20 &1717211237 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20637958532883208, guid: 4de70f3f03138974b9067a16dd1a5777,
