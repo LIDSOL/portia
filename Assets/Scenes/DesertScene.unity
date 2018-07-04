@@ -392,7 +392,6 @@ GameObject:
   - component: {fileID: 201211304}
   - component: {fileID: 201211303}
   - component: {fileID: 201211302}
-  - component: {fileID: 201211301}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -414,18 +413,6 @@ Transform:
   m_Father: {fileID: 1276695712}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -2.868, y: -0.135, z: 0.029000001}
---- !u!114 &201211301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114575540555756238, guid: 568f1763ca4880747944183acc785930,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 201211299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!81 &201211302
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1401,13 +1388,24 @@ GameObject:
   m_Component:
   - component: {fileID: 1726390945}
   - component: {fileID: 1726390944}
-  m_Layer: 0
+  - component: {fileID: 1726390943}
+  m_Layer: 2
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!154 &1726390943
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726390942}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: 0460b0749f3766f4f83f3d74e13ce14a, type: 2}
+  m_EnableTreeColliders: 1
 --- !u!218 &1726390944
 Terrain:
   m_ObjectHideFlags: 0
