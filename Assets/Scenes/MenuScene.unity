@@ -194,8 +194,8 @@ Transform:
   m_Children:
   - {fileID: 1267298134}
   - {fileID: 1460218460}
-  - {fileID: 262031894}
   - {fileID: 1777490383}
+  - {fileID: 262031894}
   - {fileID: 415684810}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -266,7 +266,7 @@ Prefab:
     - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
         type: 2}
       propertyPath: GazeEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HighLight
+      value: Over
       objectReference: {fileID: 0}
     - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
         type: 2}
@@ -276,7 +276,17 @@ Prefab:
     - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
         type: 2}
       propertyPath: GazaExitEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NormalRender
+      value: Out
+      objectReference: {fileID: 0}
+    - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: GazeClickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1693266752}
+    - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: GazeClickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114884057531245298, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
@@ -300,7 +310,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4923738961036658, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4923738961036658, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
       propertyPath: m_LocalPosition.z
@@ -326,13 +336,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1091315479832830, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1091315479832830, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 114871195157155222, guid: 4de70f3f03138974b9067a16dd1a5777,
+        type: 2}
+      propertyPath: m_Speed
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
@@ -439,7 +446,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4060503658406642, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1012475473065318, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
       propertyPath: m_Name
@@ -673,7 +680,7 @@ Prefab:
     - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
         type: 2}
       propertyPath: GazeEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HighLight
+      value: Over
       objectReference: {fileID: 0}
     - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
         type: 2}
@@ -683,13 +690,23 @@ Prefab:
     - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
         type: 2}
       propertyPath: GazaExitEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: normalRender
+      value: Out
       objectReference: {fileID: 0}
     - target: {fileID: 23789446586869176, guid: e1a65c1fe38f0d647aa357d78d53d23c,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
+    - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: GazeClickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1295218516}
+    - target: {fileID: 114914515405805488, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: GazeClickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114884057531245298, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
@@ -865,9 +882,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd8145018ca72d4f9c1b366c37b57dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
-  NormalMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
-  GazeOnTime: 1
+  OverMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
+  OutMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
   AboutTime: 18
   MyCanvas: {fileID: 1780397985}
 --- !u!1 &1306208166
@@ -880,10 +896,6 @@ GameObject:
   - component: {fileID: 1306208175}
   - component: {fileID: 1306208174}
   - component: {fileID: 1306208173}
-  - component: {fileID: 1306208172}
-  - component: {fileID: 1306208169}
-  - component: {fileID: 1306208167}
-  - component: {fileID: 1306208168}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -891,179 +903,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1306208167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1306208166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d9412aff759420192d8dcf33f969bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inactiveMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
-  gazedAtMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
---- !u!114 &1306208168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1306208166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1306208167}
-          m_MethodName: SetGazedAt
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1306208167}
-          m_MethodName: SetGazedAt
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1306208167}
-          m_MethodName: TeleportRandomly
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1306208167}
-          m_MethodName: SetGazedAt
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1306208167}
-          m_MethodName: SetGazedAt
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1306208167}
-          m_MethodName: TeleportRandomly
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!114 &1306208169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1306208166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bypassRoomEffects: 0
-  directivityAlpha: 0
-  directivitySharpness: 1
-  listenerDirectivityAlpha: 0
-  listenerDirectivitySharpness: 1
-  gainDb: 0
-  occlusionEnabled: 0
-  playOnAwake: 1
-  sourceClip: {fileID: 8300000, guid: 580c1230165b44be4922e61f9d4e2613, type: 3}
-  sourceLoop: 1
-  sourceMute: 0
-  sourcePitch: 1
-  sourcePriority: 128
-  sourceSpatialBlend: 1
-  sourceDopplerLevel: 1
-  sourceSpread: 0
-  sourceVolume: 1
-  sourceRolloffMode: 0
-  sourceMaxDistance: 500
-  sourceMinDistance: 1
-  hrtfEnabled: 1
-  audioSource: {fileID: 0}
---- !u!65 &1306208172
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1306208166}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1306208173
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1077,7 +916,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
+  - {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1180,6 +1019,11 @@ Prefab:
       value: 
       objectReference: {fileID: 12800000, guid: 41c9e4467ce091846a0df9cd18f91bec,
         type: 3}
+    - target: {fileID: 114884057531245298, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: OutMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
   m_IsPrefabParent: 0
@@ -1204,8 +1048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c6ef17a22847a41a1713cc90e0bf9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighLightMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
-  GazeOnTime: 1
+  OverMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
+  OutMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
 --- !u!20 &1717211237 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20637958532883208, guid: 4de70f3f03138974b9067a16dd1a5777,
@@ -1248,7 +1092,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4060503658406642, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1012475473065318, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
       propertyPath: m_Name
@@ -1265,6 +1109,11 @@ Prefab:
       value: 
       objectReference: {fileID: 12800000, guid: 41c9e4467ce091846a0df9cd18f91bec,
         type: 3}
+    - target: {fileID: 114884057531245298, guid: e1a65c1fe38f0d647aa357d78d53d23c,
+        type: 2}
+      propertyPath: OutMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1a65c1fe38f0d647aa357d78d53d23c, type: 2}
   m_IsPrefabParent: 0

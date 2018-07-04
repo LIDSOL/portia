@@ -1,16 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ButtonMenu : MonoBehaviour {
 
-    public Material HighLightMaterial;
+    public Material OverMaterial;
+    public Material OutMaterial;
     public string SceneDestination;
-    public float GazeOnTime = 1.0f;
 
-    private Material NormalMaterial;
     private BoxCollider boxCollider;
     private Renderer MyRenderer;
     private float Timer;
@@ -19,36 +15,27 @@ public class ButtonMenu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         this.MyRenderer = GetComponent<Renderer> ();
-        this.NormalMaterial = this.MyRenderer.material;
-        this.Timer = 0.0f;
-        this.GazeAt = false;
+        this.MyRenderer.material = OutMaterial;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (GazeAt)
-        {
-            Timer += Time.deltaTime;
-            if (Timer >= GazeOnTime)
-            {
-                Debug.Log("Starts animacion");
-                Timer = 0.0f;
-                SceneManager.LoadScene(SceneDestination);
-            }
-        }
+
 	}
 
-    public void HighLight()
+    public void OnClick()
     {
-        MyRenderer.material = HighLightMaterial;
-        GazeAt = true;
+        SceneManager.LoadScene(SceneDestination);
     }
 
-    public void NormalRender()
+    public void Over()
     {
-        MyRenderer.material = NormalMaterial;
-        GazeAt = false;
-        Timer = 0.0f;
+        MyRenderer.material = OverMaterial;
+    }
+
+    public void Out()
+    {
+        MyRenderer.material = OutMaterial;
     }
 
 }

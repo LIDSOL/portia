@@ -26,7 +26,7 @@ public class SpiderGenerator : MonoBehaviour {
         }
         foreach (GameObject s in spiders)
         {
-            s.GetComponent<SpiderScript>().setGenerator(this);
+            s.GetComponent<SpiderScript>().SetGenerator(this);
         }
 	}
 	
@@ -36,20 +36,20 @@ public class SpiderGenerator : MonoBehaviour {
         {
             foreach (GameObject s in spiders)
             {
-                s.GetComponent<SpiderScript>().reactivate();
+                s.GetComponent<SpiderScript>().Reactivate();
             }
         }
-        this.verifyConditions();
+        this.VerifyConditions();
     }
         
 
-    public void addToScore()
+    public void AddToScore()
     {
         this.Score -= 1;
         this.TextScore.text =  Score.ToString();
     }
 
-    void verifyConditions()
+    void VerifyConditions()
     {
         if (Score == 0)
         {

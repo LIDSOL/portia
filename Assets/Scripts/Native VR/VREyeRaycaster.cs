@@ -72,6 +72,7 @@ namespace VRStandardAssets.Utils
             // Do the raycast forweards to see if we hit an interactive item
             if (Physics.Raycast(ray, out hit, m_RayLength, ~m_ExclusionLayers))
             {
+                
                 VRInteractiveItem interactible = hit.collider.GetComponent<VRInteractiveItem>(); //attempt to get the VRInteractiveItem on the hit object
                 m_CurrentInteractible = interactible;
 
@@ -81,7 +82,17 @@ namespace VRStandardAssets.Utils
 
                 // Deactive the last interactive item 
                 if (interactible != m_LastInteractible)
+                {
                     DeactiveLastInteractible();
+                }
+                else
+                {
+                    // As long as the reticle is not complete, it does not call Click method
+                    if (m_Reticle.isProgressFull())
+                    {
+                        interactible.Click();
+                    }
+                }
 
                 m_LastInteractible = interactible;
 

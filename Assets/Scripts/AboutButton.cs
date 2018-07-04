@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AboutButton : MonoBehaviour {
-    public Material HighlightMaterial; // Material para cuando el objeto es señalado
-    public Material NormalMaterial;
+    public Material OverMaterial; // Material para cuando el objeto es señalado
+    public Material OutMaterial;
 
 
-    public float GazeOnTime = 1.0f; // Tiempo para disparar evento del botón
     public float AboutTime = 3.0f; // Tiempo que se muestra el mensaje
 	public Canvas MyCanvas;
     
     private Renderer MyRenderer;
-    private float Timer; // Tiempo que ha sido señalado el objeto
     private bool GazeAt; // Si el objeto esta señalado o no
     private Renderer myRenderer;
     // Variables para controlar tiempo activo del canvas
@@ -21,9 +19,8 @@ public class AboutButton : MonoBehaviour {
 
 	void Start () {
         this.myRenderer = GetComponent<Renderer>();
-        this.myRenderer.material = NormalMaterial; 
+        this.myRenderer.material = OutMaterial; 
         this.MyCanvas.enabled = false;
-        this.Timer = 0.0f;
         this.GazeAt = false;
         this.CanvasEnable = false;
         this.TimeCanvas = 0.0f;
@@ -31,16 +28,6 @@ public class AboutButton : MonoBehaviour {
 	
 	
 	void Update () {
-		if (GazeAt && !CanvasEnable)
-        {
-            Timer += Time.deltaTime;
-            if (Timer >= GazeOnTime)
-            {
-                this.myRenderer.material = HighlightMaterial;
-                Timer = 0.0f;
-                startAnimation();
-            }
-        }
         if (CanvasEnable)
         {
             TimeCanvas += Time.deltaTime;
@@ -51,32 +38,36 @@ public class AboutButton : MonoBehaviour {
                 TimeCanvas = 0.0f;
                 if (!GazeAt)
                 {
-                    this.myRenderer.material = NormalMaterial;
+                    this.myRenderer.material = OutMaterial;
                 }
             }
         }
 	}
 
 
+    public void OnClick()
+    {
+        StartAnimation();
+    }
+
     /**
      * Callback que se llama cuando el objeto es señalado
      */
-    public void HighLight()
+    public void Over()
     {
         this.GazeAt = true;
-        this.myRenderer.material = HighlightMaterial;
+        this.myRenderer.material = OverMaterial;
     }
 
     /**
      * Callback que se llama cuando el objeto deja de ser señalado 
      */
-    public void normalRender()
+    public void Out()
     {
         if(!CanvasEnable)
         {
-            this.myRenderer.material = NormalMaterial;
+            this.myRenderer.material = OutMaterial;
         }
-        this.Timer = 0.0f;
         this.GazeAt = false;
         
     }
@@ -85,7 +76,7 @@ public class AboutButton : MonoBehaviour {
      * Realiza los cambios necesarios para mostrar el texto
      * correctamente
      */
-    private void startAnimation()
+    private void StartAnimation()
     {
         // TODO: Agregar efectos de animación
         CanvasEnable = true;

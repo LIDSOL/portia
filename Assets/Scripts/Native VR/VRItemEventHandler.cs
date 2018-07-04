@@ -9,20 +9,27 @@ public class VRItemEventHandler : MonoBehaviour {
 
     public UnityEvent GazeEnterEvent;
     public UnityEvent GazaExitEvent;
+    public UnityEvent GazeClickEvent;
 
     private VRInteractiveItem interactiveItem;
 
-	// Use this for initialization
-	void Start () {
-        interactiveItem = GetComponent<VRInteractiveItem> ();
+    // Use this for initialization
+    void Start() {
+        interactiveItem = GetComponent<VRInteractiveItem>();
         interactiveItem.OnOver += OnGazeEnter;
         interactiveItem.OnOut += OnGazeExit;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        interactiveItem.OnClick += OnClick;
+    }
+
+    // Update is called once per frame
+    void Update() {
+
+    }
+    
+    void OnClick()
+    {
+        GazeClickEvent.Invoke();
+    }
 
     void OnGazeEnter()
     {

@@ -228,9 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66954b1241ca0e4ba0d9586a7492cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighLightMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
+  OverMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
+  OutMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
   SceneDestination: RoomScene
-  GazeOnTime: 2
 --- !u!114 &114914515405805488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114884057531245298}
-        m_MethodName: HighLight
+        m_MethodName: Over
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -262,7 +262,23 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114884057531245298}
-        m_MethodName: NormalRender
+        m_MethodName: Out
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  GazeClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114884057531245298}
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,53 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonUIQuit : MonoBehaviour
 {
 
-    public Sprite HighLightSprite;
-    public Sprite NormalSprite;
-    public float GazeOnTime = 1.0f;
+    public Sprite OverSprite;
+    public Sprite OutSprite;
 
     private Image image;
-    private float Timer;
-    private bool GazeAt;
 
     // Use this for initialization
     void Start()
     {
         image = GetComponent<Image>();
-        image.sprite = NormalSprite;
-        this.Timer = 0.0f;
-        this.GazeAt = false;
+        image.sprite = OutSprite;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GazeAt)
-        {
-            Timer += Time.deltaTime;
-            if (Timer >= GazeOnTime)
-            {
-                Timer = 0.0f;
-                Application.Quit();
-            }
-        }
+        
     }
 
-    public void HighLight()
+    public void OnClick()
     {
-        image.sprite = HighLightSprite;
-        GazeAt = true;
+        Application.Quit();
     }
 
-    public void NormalRenderer()
+    public void Over()
     {
-        image.sprite = NormalSprite;
-        GazeAt = false;
-        Timer = 0.0f;
+        image.sprite = OverSprite;
+    }
+
+    public void Out()
+    {
+        image.sprite = OutSprite;
     }
 }
