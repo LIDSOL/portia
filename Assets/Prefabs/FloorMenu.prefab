@@ -59,8 +59,6 @@ GameObject:
   - component: {fileID: 224328725617753994}
   - component: {fileID: 223820707759947506}
   - component: {fileID: 114123757006262346}
-  - component: {fileID: 114949713014307552}
-  - component: {fileID: 65871295978219302}
   m_Layer: 5
   m_Name: FloorMenu
   m_TagString: Untagged
@@ -116,7 +114,6 @@ GameObject:
   - component: {fileID: 224265851248710484}
   - component: {fileID: 222535209549919806}
   - component: {fileID: 114017086450400982}
-  - component: {fileID: 65360172587761636}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -124,18 +121,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &65360172587761636
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1787709931876468}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65450254589480514
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -160,18 +145,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 160, y: 40, z: 0}
   m_Center: {x: 0.08, y: -0.015, z: 0.5}
---- !u!65 &65871295978219302
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1308772477138904}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114005748730932560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,9 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661eefeba5d052449b2baad4211d2795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighLightSprite: {fileID: 21300000, guid: 730e9e997c213fd42ad4cfff729a2263, type: 3}
-  NormalSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  GazeOnTime: 1
+  OverSprite: {fileID: 0}
+  OutSprite: {fileID: 0}
 --- !u!114 &114222389402481338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -349,10 +321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d820a41afbfb724d9a5a400a49736ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighLightSprite: {fileID: 21300000, guid: 730e9e997c213fd42ad4cfff729a2263, type: 3}
-  NormalSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  OverSprite: {fileID: 0}
+  OutSprite: {fileID: 0}
   SceneDestination: MenuScene
-  GazeOnTime: 1
 --- !u!114 &114340440775075692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,6 +376,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  GazeClickEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114763480267087210
@@ -477,17 +453,11 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
---- !u!114 &114949713014307552
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1308772477138904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30047854a8a62ce4dbd0580eebd6798b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  GazeClickEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!222 &222217204208194122
 CanvasRenderer:
   m_ObjectHideFlags: 1

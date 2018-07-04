@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8037f5692ea83fa439a54ac2d278876e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DefaultDistance: 4
+  m_DefaultDistance: 5
   m_UseNormal: 0
   m_Image: {fileID: 114156430108315708}
   m_SpriteNormal: {fileID: 21300000, guid: cbe13fde6c9350d42aee60216dfc41e8, type: 3}

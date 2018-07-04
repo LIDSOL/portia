@@ -101,9 +101,8 @@ namespace VRStandardAssets.Utils
             m_Image.type = Image.Type.Filled;
             m_Image.fillOrigin = (int) Image.Origin360.Top;
             m_Image.sprite = m_SpriteHitObject;
-            m_ReticleTransform.position = hit.point;
-            m_ReticleTransform.localScale = m_OriginalScale * hit.distance;
-            
+            m_ReticleTransform.position.Set(hit.point.x, hit.point.y, hit.point.z);
+
             // If the reticle should use the normal of what has been hit...
             if (m_UseNormal)
                 // ... set it's rotation based on it's forward vector facing along the normal.
