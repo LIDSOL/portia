@@ -5,22 +5,25 @@ using UnityEngine;
 public class AboutButton : MonoBehaviour {
     public Material OverMaterial; // Material para cuando el objeto es señalado
     public Material OutMaterial;
-
+    public Animator AboutAnimator;
 
     public float AboutTime = 3.0f; // Tiempo que se muestra el mensaje
 	public Canvas MyCanvas;
     
     private Renderer MyRenderer;
     private bool GazeAt; // Si el objeto esta señalado o no
-    private Renderer myRenderer;
+
     // Variables para controlar tiempo activo del canvas
     private bool CanvasEnable;
     private float TimeCanvas;
 
-	void Start () {
-        this.myRenderer = GetComponent<Renderer>();
-        this.myRenderer.material = OutMaterial; 
-        this.MyCanvas.enabled = false;
+    // Más eficiente utilizar hash en lugar de string
+    private int ScaleAnimatorHash = Animator.StringToHash("Scale");
+    private int CloseAnimatorHash = Animator.StringToHash("Close");
+
+    void Start () {
+        this.MyRenderer = GetComponent<Renderer>();
+        this.MyRenderer.material = OutMaterial; 
         this.GazeAt = false;
         this.CanvasEnable = false;
         this.TimeCanvas = 0.0f;
@@ -34,11 +37,12 @@ public class AboutButton : MonoBehaviour {
             if (TimeCanvas >= AboutTime)
             {
                 CanvasEnable = false;
-                MyCanvas.enabled = false;
                 TimeCanvas = 0.0f;
+                AboutAnimator.SetBool(ScaleAnimatorHash, false);
+                AboutAnimator.SetBool(CloseAnimatorHash, true);
                 if (!GazeAt)
                 {
-                    this.myRenderer.material = OutMaterial;
+                    this.MyRenderer.material = OutMaterial;
                 }
             }
         }
@@ -56,7 +60,7 @@ public class AboutButton : MonoBehaviour {
     public void Over()
     {
         this.GazeAt = true;
-        this.myRenderer.material = OverMaterial;
+        this.MyRenderer.material = OverMaterial;
     }
 
     /**
@@ -66,7 +70,7 @@ public class AboutButton : MonoBehaviour {
     {
         if(!CanvasEnable)
         {
-            this.myRenderer.material = OutMaterial;
+            this.MyRenderer.material = OutMaterial;
         }
         this.GazeAt = false;
         
@@ -78,8 +82,8 @@ public class AboutButton : MonoBehaviour {
      */
     private void StartAnimation()
     {
-        // TODO: Agregar efectos de animación
         CanvasEnable = true;
-        MyCanvas.enabled = true;
+        AboutAnimator.SetBool(ScaleAnimatorHash, true);
+        AboutAnimator.SetBool(CloseAnimatorHash, false);
     }
 }

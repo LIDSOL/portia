@@ -341,6 +341,10 @@ Prefab:
       propertyPath: m_Speed
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 4923738961036658, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0195214
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4de70f3f03138974b9067a16dd1a5777, type: 2}
   m_IsPrefabParent: 0
@@ -404,7 +408,7 @@ Transform:
   m_GameObject: {fileID: 795939542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 7.8045807, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0282843, y: 1.0282843, z: 1.0282843}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -884,6 +888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OverMaterial: {fileID: 2100000, guid: 0edec395166a3244592f3532c7ce794c, type: 2}
   OutMaterial: {fileID: 2100000, guid: daad62324deb0cf448e5c805c8459bff, type: 2}
+  AboutAnimator: {fileID: 1780397987}
   AboutTime: 18
   MyCanvas: {fileID: 1780397985}
 --- !u!1 &1306208166
@@ -1151,6 +1156,7 @@ GameObject:
   - component: {fileID: 1780397985}
   - component: {fileID: 1780397984}
   - component: {fileID: 1780397983}
+  - component: {fileID: 1780397987}
   m_Layer: 5
   m_Name: About
   m_TagString: Untagged
@@ -1223,7 +1229,7 @@ RectTransform:
   m_GameObject: {fileID: 1780397982}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -0.097}
-  m_LocalScale: {x: 0.78999996, y: 0.79, z: 0.79}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 811468220}
   - {fileID: 816307088}
@@ -1237,6 +1243,23 @@ RectTransform:
   m_AnchoredPosition: {x: -4.1732, y: 3.122}
   m_SizeDelta: {x: 6, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1780397987
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1780397982}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53ecd3800d5340d42a715329deaf936e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1997548102
 GameObject:
   m_ObjectHideFlags: 0
