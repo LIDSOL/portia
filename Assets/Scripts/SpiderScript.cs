@@ -5,74 +5,84 @@ using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class SpiderScript : MonoBehaviour {
-    private NavMeshAgent agent;
-    private Animator animator;
-    private float timer;
-    private Vector3 nextPosition;
-    private float  inactiveTime = 0.0f;
-    private bool isActive = true;
-    private SpiderGenerator spiderGenerator;
+    private NavMeshAgent Agent;
+    private Animator AnimatorController;
+    private float Timer;
+    private Vector3 NextPosition;
+    private float  InactiveTime = 0.0f;
+    private bool IsActive = true;
+    private SpiderGenerator Generator;
 
-    public float travelTime = 5f;
-    public float animationWalkSpeed = 2f;
-    public float walkableRadius = 5f;
-    public float timeToReturn = 5.0f;
+    public float TravelTime = 5f;
+    public float AnimationWalkSpeed = 2f;
+    public float WalkableRadius = 5f;
+    public float TimeToReactivate = 5.0f;
+
+    private int HashAnimationDie = Animator.StringToHash("Die");
+    private int HashAnimationOnMove = Animator.StringToHash("OnMove");
+    private int HashAnimationWalkSpeed = Animator.StringToHash("WalkSpeed");
 
 	void Start ()
     {
-        this.isActive = true;
-        this.agent = GetComponent<NavMeshAgent>();
-        this.animator = GetComponent<Animator>();
-        this.agent.transform.position = Random.insideUnitSphere * walkableRadius;
-        this.timer = travelTime; // Para que inicie con las arañas moviendose
+        this.IsActive = true;
+        this.Agent = GetComponent<NavMeshAgent>();
+        this.AnimatorController = GetComponent<Animator>();
+        this.Agent.transform.position = Random.insideUnitSphere * WalkableRadius;
+        this.Timer = TravelTime; // Para que inicie moviendose
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (isActive)
+        if (this.IsActive)
         {
-            this.timer += Time.deltaTime;
-            if (this.timer > this.travelTime) {
-                if (this.isActive) {
+            this.Timer += Time.deltaTime;
+            if (this.Timer > this.TravelTime)
+            {
+                if (this.IsActive) {
                     this.SetNewPosition();
                 }
             }
 
-            if (agent.remainingDistance == 0f || (Mathf.Abs(agent.velocity.x) < 0.1f && Mathf.Abs(agent.velocity.z) < 0.1f))
+            if (this.Agent.remainingDistance == 0.0f || (Mathf.Abs(Agent.velocity.x) < 0.1f && Mathf.Abs(Agent.velocity.z) < 0.1f))
             {
-                animator.SetBool("onMove", false);
+                this.AnimatorController.SetBool(HashAnimationOnMove, false);
                 this.SetNewPosition();
             } else
             {
-                animator.SetBool("onMove", true);
+                this.AnimatorController.SetBool(HashAnimationOnMove, true);
             }
         }
         else
         {
-            UpdateInactiveTime();
+            this.UpdateInactiveTime();
         }
     }
-
-
+    
     public void OnClick()
     {
-        isActive = false;
-        animator.SetTrigger("die");
-        spiderGenerator.AddToScore();
-        gameObject.SetActive(false); // Desaparece la araña del mapa
+        this.AnimatorController.SetBool(HashAnimationDie, true);
     }
 
+    /*
+     * Se llama después de terminar la animación [die]
+     */
+    public void Hide()
+    {
+        this.IsActive = false;
+        this.Generator.AddToScore();
+        gameObject.SetActive(false);
+    }
 
     /**
      * Establece un  nuevo punto del mapa al cual se va a mover
      */ 
     void SetNewPosition()
     {
-        this.timer = 0.0f;
-        this.nextPosition = Random.insideUnitSphere * this.walkableRadius;
-        this.agent.SetDestination(nextPosition);
-        this.animator.SetFloat("walkSpeed", animationWalkSpeed);
+        this.Timer = 0.0f;
+        this.NextPosition = Random.insideUnitSphere * this.WalkableRadius;
+        this.Agent.SetDestination(NextPosition);
+        this.AnimatorController.SetFloat(HashAnimationWalkSpeed, AnimationWalkSpeed);
     }
 
     /**
@@ -80,9 +90,9 @@ public class SpiderScript : MonoBehaviour {
      */
     void UpdateInactiveTime()
     {
-        if (!isActive)
+        if (!this.IsActive)
         {
-            inactiveTime += Time.deltaTime;
+            this.InactiveTime += Time.deltaTime;
         }
     }
 
@@ -91,14 +101,14 @@ public class SpiderScript : MonoBehaviour {
      */
     public void Reactivate()
     {
-        if (this.inactiveTime > this.timeToReturn)
+        if (this.InactiveTime > this.TimeToReactivate)
         {
             Vector3 pos;
-            while (!RandomPointOnNavmesh(Vector3.zero, walkableRadius, out pos)) Debug.Log("llamada");
+            while (!RandomPointOnNavmesh(Vector3.zero, WalkableRadius, out pos)) Debug.Log("llamada");
             gameObject.transform.position = pos;
-            this.isActive = true;
-            this.inactiveTime = 0.0f;
-            this.timer = 0.0f;
+            this.IsActive = true;
+            this.InactiveTime = 0.0f;
+            this.Timer = 0.0f;
             gameObject.SetActive(true);
         } else
         {
@@ -106,17 +116,9 @@ public class SpiderScript : MonoBehaviour {
         }
     }
 
-    public SpiderGenerator GetGenerator()
-    {
-        return this.spiderGenerator;
-    }
-
-    public void SetGenerator(SpiderGenerator sg)
-    {
-        this.spiderGenerator = sg;
-    }
-
-    /* obtiene un punto aleatorio en el navmesh */
+    /* 
+     * Obtiene un punto aleatorio en el navmesh 
+     */
     bool RandomPointOnNavmesh(Vector3 center, float range, out Vector3 result)
     {
         NavMeshHit hit;
@@ -133,4 +135,18 @@ public class SpiderScript : MonoBehaviour {
         result = Vector3.zero;
         return false;
     }
+
+    // Getters and Setters
+
+    public SpiderGenerator GetGenerator()
+    {
+        return this.Generator;
+    }
+
+    public void SetGenerator(SpiderGenerator sg)
+    {
+        this.Generator = sg;
+    }
+
+
 }

@@ -275,7 +275,7 @@ MonoBehaviour:
   spider: {fileID: 1556592771978472, guid: 05ca9fa28fdbb13439553dcdc8d05f69, type: 2}
   MaxNumSpiders: 35
   Delay: 0.5
-  TargetScore: 30
+  TargetScore: 20
   TextScore: {fileID: 1743534761}
 --- !u!4 &113040510
 Transform:

@@ -716,6 +716,12 @@ Prefab:
       propertyPath: MaxNumSpiders
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 114783441373464982, guid: 553510b9d25807542b0b42da1f74dc07,
+        type: 2}
+      propertyPath: spider
+      value: 
+      objectReference: {fileID: 1928652845404890, guid: 35fa49fc1a7baf346995328f5dc64e8f,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 553510b9d25807542b0b42da1f74dc07, type: 2}
   m_IsPrefabParent: 0
