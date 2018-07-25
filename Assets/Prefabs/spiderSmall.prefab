@@ -1772,9 +1772,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6225ea363a981bb41abf73149f95d38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  travelTime: 10
-  animationWalkSpeed: 3
-  walkableRadius: 25
+  TravelTime: 5
+  AnimationWalkSpeed: 3
+  WalkableRadius: 15
   TimeToReactivate: 5
 --- !u!114 &114410880381611772
 MonoBehaviour:
