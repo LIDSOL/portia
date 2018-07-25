@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661eefeba5d052449b2baad4211d2795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OverSprite: {fileID: 0}
-  OutSprite: {fileID: 0}
+  OverSprite: {fileID: 21300000, guid: 35fe4ebb9b7ae7245919fa10a28fc69a, type: 3}
+  OutSprite: {fileID: 21300000, guid: 8abd59b344a53c74a9508ec1793d721c, type: 3}
 --- !u!114 &114222389402481338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,8 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d820a41afbfb724d9a5a400a49736ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OverSprite: {fileID: 0}
-  OutSprite: {fileID: 0}
+  OverSprite: {fileID: 21300000, guid: 35fe4ebb9b7ae7245919fa10a28fc69a, type: 3}
+  OutSprite: {fileID: 21300000, guid: 8abd59b344a53c74a9508ec1793d721c, type: 3}
   SceneDestination: MenuScene
 --- !u!114 &114340440775075692
 MonoBehaviour:
