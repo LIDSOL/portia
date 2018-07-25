@@ -61,6 +61,7 @@ public class SpiderScript : MonoBehaviour {
     
     public void OnClick()
     {
+        this.Agent.isStopped = true;
         this.AnimatorController.SetBool(HashAnimationDie, true);
     }
 
